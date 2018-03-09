@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'iconfont';  /* project id 561414 */
-  src: url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.eot');
-  src: url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.svg#iconfont') format('svg');
+	font-family: 'iconfont';  /* project id 561414 */
+	src: url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.eot');
+	src: url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.eot?#iefix') format('embedded-opentype'),
+	url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.woff') format('woff'),
+	url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.ttf') format('truetype'),
+	url('https://at.alicdn.com/t/font_561414_10tgz2qrzl37syvi.svg#iconfont') format('svg');
 }
 .head{
 	width: 100%;
@@ -69,7 +69,6 @@
 .nav_wenzi{
 	float: left;
 	margin-left: 189px;
-
 }
 .nav_wenzi span{
 	line-height: 100px;
@@ -116,6 +115,7 @@
 	height: 398px;
 	background-color:#ffffff;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .danpin_top{
 	width: 100%;
@@ -134,8 +134,29 @@
 	float: right;
 	margin-top: 17px;
 	border: 1px solid #E0E0E0;
+	user-select: none;
 }
-.danpin_btn div{
+.tuijian_btn1{
+	width: 34px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	float: left;
+	cursor: pointer;
+	color: #B4B0B0;
+}
+.tuijian_btn2{
+	width: 34px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	float: left;
+	cursor: pointer;
+	color: #e0e0e1;
+}
+.danpin_btn1{
+	border-right: 1px solid #E0E0E0;
+	color: #6b5d5a;
 	width: 34px;
 	height: 22px;
 	text-align: center;
@@ -143,17 +164,30 @@
 	float: left;
 	cursor: pointer;
 }
-.danpin_btn1{
-	border-right: 1px solid #E0E0E0;
-	color: #C2B4B0;
-}
 .danpin_btn2{
+	color: #6b5d5a;
+	width: 34px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	float: left;
+	cursor: pointer;
+}
+.danpin_btn1:hover{
+	color: #ff6700;
+}
+.danpin_btn2:hover{
+	color: #ff6700;
+}
+.danpin_btn .disable1{
 	color: #F0EDED;
+	cursor: default;
 }
 .dapin_bottom{
-	width: 1226px;
+	width: 4000px;
 	height: 340px;
 	background-color: #FFFFFF;
+	transition: all .5s;
 }
 .danpin_item{
 	width: 234px;
@@ -162,7 +196,9 @@
 	border-top: 1px solid #FFAC12;
 	padding-top: 39px;
 	float: left;
-	margin-right: 14px;
+}
+.danpin_item_1{
+	margin-left: 14px;
 }
 .danpin_item img{
 	width: 160px;
@@ -250,6 +286,25 @@
 	width: 100%;
 	height: 614px;
 	float: left;
+	position: relative;
+}
+.part1{
+	width: 234px;
+	height: 614px;
+	float: left;
+}
+.part2{
+	width: 992px;
+	height: 614px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.active2{
+	z-index: 99;
+	opacity: 1;
 }
 .jiadian_left{
 	width: 234px;
@@ -341,9 +396,15 @@
 	margin-left:32px;
 	float: left;
 	margin-top: 42px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.dapei_right .active2{
+	border-bottom: 2px solid #ff6700;
+	color: #ff6700;
 }
 .dapei_img{
-	width: 1226px;
 	height: 100%;
 	float: left;
 }
@@ -376,20 +437,16 @@
 	height: 380px;
 	width: 1226px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .tuijian_btn{
 	margin-top: 37px;
 }
-.tuijian_btn1{
-	color: #B4B0B0;
-}
-.tuijian_btn2{
-	color: #e0e0e1;
-}
 .tuijian_bottom{
-	width: 100%;
+	width: 4000px;
 	height: 300px;
 	float: left;
+	transition: all .5s;
 }
 .tuijian_img{
 	height: 300px;
@@ -536,17 +593,12 @@
 	height: 21px;
 	background-color: black;
 }
-/* .lunbodian{
-	width: 296px;
-	height: 30px;
-/* 	background-color: black; */
-}
 .lunbodian dian2{
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
 	background-color: white;
-} */
+}
 .shipin{
 	height: 425px;
 }
@@ -645,7 +697,6 @@
 }
 .first{
 	width: 56px;
-	/* height: 111px; */
 	margin-top: 42px;
 	float: left;
 }
@@ -770,7 +821,6 @@
 }
 .end_bottombox{
 	margin-top: 35px;
-
 }
 .end_bottombox img{
 	margin: 0 auto;
@@ -781,20 +831,24 @@
 	height: 460px;
 	margin: 0 auto;
 	position: relative;
-	background-color: red;
 }
-.banner_img{
+.imgbox{
 	width: 1226px;
 	height: 460px;
-	background-color: blue;
 	position: relative;
 }
-.banner_img img{
+.imgbox li{
 	width: 1226px;
 	height: 460px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	transition: all .5s;
+	opacity: 0;
+}
+.imgbox li.active{
+	z-index: 9;
+	opacity: 1;
 }
 .banner_nav{
 	width: 234px;
@@ -802,7 +856,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	/* z-index: -1; */
+	 z-index: 999;
 	padding: 20px 0;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -828,6 +882,8 @@
 	top: 0;
 	bottom: 0;
 	margin: auto;
+	z-index: 999;
+	user-select: none;
 }
 .banner_lbtn{
 	left: 234px;
@@ -916,9 +972,6 @@
 	background-color: rgba(0, 0, 0,0.6);
 	color: #fff;
 }
-.danpin_btn1:hover{
-	color: #ff6700;
-}
 .jiadian_more:hover  h2{
 	color:  #ff6700;
 	cursor: pointer;
@@ -937,17 +990,9 @@
 	cursor: pointer;
 	box-shadow:0 10px 20px 5px #D3D3D3;
 	transform: translateY(-1px);
-	
-	
 }
 .jiadian_item:hover{
 	cursor: pointer;
-}
-.dapei_right span:hover{
-	cursor: pointer;
-	border-bottom: 2px solid #ff6700;
-	padding-bottom: 4px;
-	color: #ff6700;
 }
 .tupian:hover{
 	cursor: pointer；
@@ -1070,38 +1115,31 @@
 .lbd1:hover{
 	background-color: #ff6700;
 }
-.banner_lbd{
-	width: 400px;
-	height: 18px;
-	position: relative;
+.pagerbox{
+	width: 150px;
+	height: 10px;
+	position: absolute;
+	bottom: 20px;
+	right:40px;
+	z-index: 999;
+	transition: all .5s;
 }
-.banner_lbd1{
-	width: 8px;
-	height: 8px;
+.pagerbox li.active{
+	background-color: red;
+}
+.pagerbox li{
+	width: 5px;
+	height: 5px;
 	border-radius: 50%;
 	background-color: #8E2020;
 	border: 2px solid #BC706F;
-	margin-left: 1011px;
-	margin-top: 420px;
-	position: absolute;
+	margin-right: 15px;
 	cursor: pointer;
 	float: left;
+	transition: all .5s;
 }
-.banner_lbd2{
-	margin-left: 1041px;
-}
-.banner_lbd3{
-	margin-left: 1071px;
-}
-.banner_lbd4{
-	margin-left: 1101px;
-}
-.banner_lbd5{
-	margin-left: 1131px;
-}
-.banner_lbd1:hover{
-	background-color: #F48586;
-	border: 2px solid #974D4D;
+.pagerbox li:hover{
+	background-color: red;
 }
 .jiadian_item:hover,.tupian:hover,.reping_item:hover{
 	box-shadow:0 10px 20px 5px #D3D3D3;
