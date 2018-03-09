@@ -45,13 +45,25 @@
     banner.onmouseleave=function () {
         t=setInterval(move,2000);
     };
+    let flag=true;
     banner_rbtn.onclick=function () {
-        move();
-    };
+        if(flag){
+            flag=false;
+            move();
+        }
+    }
     banner_lbtn.onclick=function () {
-        n-=2;
-        move();
+        if(flag){
+            flag=false;
+            n-=2;
+            move();
+        }
     };
+    imgs.forEach(function (ele) {
+        ele.addEventListener("transitionend",function () {
+            flag=true;
+        })
+    })
 }
 //单品
 {   function good1(parent) {
