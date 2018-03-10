@@ -55,6 +55,11 @@
 	line-height: 40px;
 }
 .nav{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.nav_box{
 	width: 1226px;
 	height: 100px;
 	margin: 0 auto;
@@ -67,8 +72,30 @@
 	float: left;
 }
 .nav_wenzi{
+	width: 687px;
+	height: 100px;
 	float: left;
-	margin-left: 189px;
+	margin-left: 109px;
+}
+.nav_wzbox{
+	width: 510px;
+	height: 100px;
+	float: left;
+}
+.nav_wzbox2{
+	width: 127px;
+	height: 100px;
+	margin-left: 5px;
+	float: left;
+}
+.span1:hover{
+	color: #ff6700;
+}
+.span2 span:hover{
+	color: #ff6700;
+}
+.nav_wenzi .active4{
+	color: #ff6700;
 }
 .nav_wenzi span{
 	line-height: 100px;
@@ -77,6 +104,65 @@
 	float: left;
 	padding: 0 10px;
 	cursor: pointer;
+}
+.nav_bottom{
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	z-index: 999;
+	border-top: 1px solid #e0e0e0;
+	background: #fff;
+	overflow: hidden;
+	transition: all .3s;
+}
+.nav_bcontent{
+	width: 1226px;
+	/*height: 235px;*/
+	margin: 0 auto;
+	position: relative;
+}
+.nav_bcontent ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all .5s;
+}
+.nav_bcontent ul.active4{
+	opacity: 1;
+}
+.nav_bcontent ul li{
+	width: 180px;
+	/*height: 229px;*/
+	float: left;
+	padding: 20px 12px;
+	text-align: center;
+	position: relative;
+}
+.thing1 li img{
+	width: 150px;
+	height: 150px;
+}
+.shangpin_name{
+	font-size: 12px;
+}
+.ming{
+	line-height: 20px;
+	color: #333;
+}
+.price{
+	line-height: 20px;
+	color: #FF6700;
+}
+.nav_fenge{
+	width: 1px;
+	height: 110px;
+	position: absolute;
+	top: 35px;
+	right: 0px;
+	background-color: #e0e0e0;
 }
 .search{
 	width: 295px;
@@ -522,6 +608,19 @@
 	height: 51px;
 	border-top: 1px solid #FFAC13;
 }
+.tw_box{
+	width: 1200px;
+	height: 310px;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	transition: all .5s;
+}
+.tuwen{
+	width: 296px;
+	height: 310px;
+	float: left;
+}
 .title h1{
 	padding-top: 45px;
 	color: #ffac13;
@@ -856,7 +955,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	 z-index: 999;
+	 z-index: 99;
 	padding: 20px 0;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -871,6 +970,44 @@
 .banner_jiantou{
 	float: right;
 }
+.banner_yin{
+	/*width: 795px;*/
+	height: 459px;
+	background-color: yellow;
+	border-top: 1px solid #e0e0e0;
+	position: absolute;
+	top: 0;
+	left: 234px;
+}
+.banner_yul{
+	height: 100%;
+	background-color: blue;
+	float: left;
+}
+.banner_yul li{
+	float: left;
+	width: 265px;
+	height: 76px;
+	padding:0 25px;
+	background-color: #6cecff;
+}
+.banneryimg{
+	width: 50px;
+	height: 50px;
+	margin-top: 13px;
+	margin-right: 10px;
+	float: left;
+}
+.banner_yul li img{
+	width: 50px;
+	height: 50px;
+}
+.banner_yul li span{
+	font-size: 14px;
+	line-height: 76px;
+	color: #333;
+
+}
 .banner_btn{
 	width: 41px;
 	height: 69px;
@@ -882,7 +1019,7 @@
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	z-index: 999;
+	z-index: 9;
 	user-select: none;
 }
 .banner_lbtn{
@@ -949,9 +1086,6 @@
  .head_buy:hover span{
 	color: #ff6700;
  }
- .nav_wenzi span:hover{
-	color: #ff6700;
- }
  .search_btn:hover{
  	background-color: #ff6700;
  	cursor: pointer;
@@ -960,7 +1094,7 @@
  .search_kuang:hover{
  	cursor: pointer;
  }
- .banner_nav li:hover{
+ .banner_navli:hover{
  	background-color: #ff6700;
  	cursor: pointer;
  }
@@ -995,7 +1129,7 @@
 	cursor: pointer;
 }
 .tupian:hover{
-	cursor: pointer；
+	cursor: pointer;
 }
 .bofang_btn:hover{
 	cursor: pointer;
@@ -1058,6 +1192,7 @@
 .neirong_item{
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
 }
 .nr_btn{
 	width: 20px;
@@ -1074,6 +1209,7 @@
 	/* transition: bottom 0.5s linear,opacity 1s linear; */
 	background-color: rgba(0, 0, 0,0.2);
 	visibility: hidden;
+	user-select: none;
 }
 .nr_lbtn{
 	margin-left: 0;
@@ -1090,11 +1226,18 @@
 .lbd{
 	width: 296px;
 	height: 30px;
-	position: relative;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+.lbd-box{
+	width: 130px;
+	height: 20px;
+	margin: 0 auto;
 }
 .lbd1{
-	width: 5px;
-	height: 5px;
+	width: 3px;
+	height: 3px;
 	border-radius: 50%;
 	background-color: #B0B0B0;
 	border: 2px solid rgba(0, 0, 0,0);
@@ -1106,14 +1249,35 @@
 }
 .lbd2{
 	margin-left: 143px;
-	border: 2px solid #ff6700;
-	background-color: #fff;
 }
 .lbd3{
 	margin-left: 173px;
 }
+.lbd4{
+	margin-left: 203px;
+}
+.lbd5{
+	margin-left: 103px;
+}
+.lbd6{
+	margin-left: 133px;
+}
+.lbd7{
+	margin-left: 163px;
+}
+.lbd8{
+	margin-left: 193px;
+}
 .lbd1:hover{
 	background-color: #ff6700;
+}
+.lbd .active3{
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	border: 2px solid #ff6700;
+	background-color: #fff;
+	cursor: default;
 }
 .pagerbox{
 	width: 150px;
