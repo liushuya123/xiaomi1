@@ -94,9 +94,6 @@
 .span2 span:hover{
 	color: #ff6700;
 }
-.nav_wenzi .active4{
-	color: #ff6700;
-}
 .nav_wenzi span{
 	line-height: 100px;
 	color: #333;
@@ -112,7 +109,7 @@
 	top: 100px;
 	left: 0;
 	z-index: 999;
-	border-top: 1px solid #e0e0e0;
+	/*border-top: 1px solid #e0e0e0;*/
 	background: #fff;
 	overflow: hidden;
 	transition: all .3s;
@@ -128,7 +125,7 @@
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: all .5s;
+	transition: all .1s;
 }
 .nav_bcontent ul.active4{
 	opacity: 1;
@@ -529,10 +526,12 @@
 	margin-top: 37px;
 }
 .tuijian_bottom{
-	width: 4000px;
 	height: 300px;
 	float: left;
 	transition: all .5s;
+}
+.bottom1{
+	width: 4000px;
 }
 .tuijian_img{
 	height: 300px;
@@ -971,25 +970,37 @@
 	float: right;
 }
 .banner_yin{
-	/*width: 795px;*/
+	width: 992px ;
 	height: 459px;
-	background-color: yellow;
-	border-top: 1px solid #e0e0e0;
 	position: absolute;
 	top: 0;
 	left: 234px;
+	z-index: 999;
+	display: none;
+	box-shadow:  0 10px 20px 5px rgba(0,0,0,0.18);
+	transition: all .1s;
+	/*opacity: 0;*/
+}
+.banner_yin1{
+	width: 744px ;
 }
 .banner_yul{
-	height: 100%;
-	background-color: blue;
+	width: 248px;
+	height: 459px;
 	float: left;
+	border-top:  1px solid #e0e0e0;
+	background-color: #fff;
 }
-.banner_yul li{
+.banner_navli .active5{
+	opacity: 1;
+}
+.banner_yin .banner_yul li{
 	float: left;
-	width: 265px;
+	width: 201px;
 	height: 76px;
-	padding:0 25px;
-	background-color: #6cecff;
+	padding: 0 21px;
+	/*padding:0 25px;*/
+	background-color: #fff;
 }
 .banneryimg{
 	width: 50px;
@@ -1285,7 +1296,7 @@
 	position: absolute;
 	bottom: 20px;
 	right:40px;
-	z-index: 999;
+	z-index: 99;
 	transition: all .5s;
 }
 .pagerbox li.active{

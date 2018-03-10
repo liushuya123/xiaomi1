@@ -3,32 +3,35 @@
     const nav=document.querySelector(".nav");
     const nav_box=document.querySelector(".nav_wzbox");
     const nav_bottom=document.querySelector(".nav_bottom");
+
     nav_box.onmouseenter=function () {
         nav_bottom.style.height="235px";
+        nav_bottom.style.borderTop="1px solid #e0e0e0";
     };
     nav_box.onmouseleave=function () {
         nav_bottom.style.height="0";
+        nav_bottom.style.borderTop="";
     };
     nav_bottom.onmouseenter=function () {
         nav_bottom.style.height="235px";
+        nav_bottom.style.borderTop="1px solid #e0e0e0";
     };
     nav_bottom.onmouseleave=function () {
         nav_bottom.style.height="0";
+        nav_bottom.style.borderTop="";
     };
 
     const spans=document.querySelectorAll(".span1");
     const things=document.querySelectorAll(".thing1");
-    // let n=0;
-    // let l=things.length;
     spans.forEach(function (ele,index) {
         ele.onmouseenter=function () {
             for(let i=0;i<spans.length;i++){
                 // spans[i].classList.remove("active4");
                 things[i].classList.remove("active4");
                 // spans[i].classList.remove("active4");
-                spans[index].classList.remove("active4");
+                // spans[index].classList.remove("active4");
             }
-            this.classList.add("active4");
+            // this.classList.add("active4");
             things[index].classList.add("active4");
         };
         ele.onmouseleave=function () {
@@ -106,6 +109,20 @@
 }
 //banner list
 {
+    let navlis=document.querySelectorAll(".banner_navli");
+    let menus=document.querySelectorAll(".banner_yin");
+    let banner_yuls=document.querySelectorAll(".banner_yul");
+    let obj=menus[0];
+    navlis.forEach(function (ele,index) {
+        ele.onmouseenter=function () {
+            obj.style.display="none";
+            menus[index].style.display="block";
+            obj=menus[index];
+        };
+        ele.onmouseleave=function () {
+            menus[index].style.display="none";
+        }
+    });
 
 }
 //单品
